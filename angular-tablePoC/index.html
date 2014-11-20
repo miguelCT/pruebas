@@ -1,9 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
-	<title></title>
+	<title>PoC</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
-<body>
+<body ng-controller="myCtrl">
+<table class="table">
+<thead>
+	<tr>
+		<td>tipo</td>
+		<td>modelo</td>
+	</tr>
+</thead>
+<tbody ng-repeat="aparatos in datos.devices">
+	<tr >
 
+		<td>{{aparatos.type}}</td>
+		<td>{{aparatos.model}}</td>
+	</tr>
+	<tr>
+	<td colspan="2">
+		<div>{{aparatos.mas.otro}}</div>
+	</td>
+	</tr>
+</tbody>
+	
+</table>
+
+ 	<script src="app.js"></script>
 </body>
 </html>
